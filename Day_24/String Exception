@@ -1,0 +1,39 @@
+import java.util.Scanner;
+
+class Handle
+{
+    String str=null;
+   // void read()
+   // {
+//        Scanner sc=new Scanner(System.in);
+  //      System.out.print("Enter A Line-:");
+     //   str=sc.nextLine();
+  //  }
+  //Array out of bound exception
+  //number format exception
+    void handle()
+    {
+        try
+        {
+           str.length();
+        }
+        catch(NullPointerException E)
+        {
+            if(str==null)
+            System.out.print("String is Empty");
+        }
+
+    }
+    // void display()
+    // {
+    //     System.out.print("String Size Is -:"+str.length());
+    // }
+}
+public class StringException {
+    public static void main(String[] args) {
+        Handle hnd=new Handle();
+      //  hnd.read();
+        hnd.handle();
+       // hnd.display();
+    }
+}
