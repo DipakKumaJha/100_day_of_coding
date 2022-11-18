@@ -1,0 +1,51 @@
+import java.util.Scanner;
+
+class Handle
+{
+    int key;
+    int found=0;
+    int arr[]=new int [5];
+    void read()
+    {
+        Scanner sc=new Scanner (System.in);
+        for(int i=0;i<5;i++)
+        {
+            System.out.print("Enter Number-:");
+            arr[i]=sc.nextInt();
+        }
+        System.out.print("Enter Search Element-:");
+        key=sc.nextInt();
+    }
+    void handle()
+    {
+        try
+        {
+            for(int i=0;i<5;i++)
+            {
+                if(arr[i]==key)
+                System.out.print("Found Element Index Number Is....-:"+(i+1));
+                found=1;
+                break;
+            }
+        }
+        catch(ArrayIndexOutOfBoundsException E)
+        {
+            for(int i=0;i<5;i++){
+            if(key != arr[i])
+            {
+                System.out.print("Which Element You Want to Search Them Element Is Not Present In The Array..........");
+
+            }
+        }
+        }
+    }
+   
+}
+
+public class OutOfBounded {
+    public static void main(String[] args) {
+        Handle hnd=new Handle();
+        hnd.read();
+        hnd.handle();
+    }
+}
