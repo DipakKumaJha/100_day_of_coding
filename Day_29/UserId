@@ -1,0 +1,59 @@
+import java.util.*;
+import java.text.BreakIterator;
+class user
+{   
+    String  pass ;
+    String  username;
+    String name;
+     String ps;
+    Scanner in =new Scanner(System.in);
+    void read()
+    {
+                
+                System.out.print("Enter User Name...->>");
+                username=in.nextLine();        
+                System.out.print("Enter Password...->>");
+                pass=in.nextLine();
+             
+     }
+     void print()
+     {
+        if(username.length()==6 && username.length()==15)
+        {
+            System.out.println(username);
+        }
+        if(pass.length()>8 && pass.length()<256)
+        System.out.println(pass);
+     }
+     
+     void reread()
+     {
+        Scanner sc=new Scanner(System.in);
+        System.out.print("Enter Name...->");
+         name=sc.nextLine();
+        System.out.print("Enter Password...->");
+         ps=sc.nextLine();
+     }
+     void reprint()
+     {
+        if(username==name && pass==ps)
+        {
+            System.out.println(name);
+            System.out.println(ps);
+        }
+        System.out.println("User ID Password is Successfully..........");
+     }
+   
+    
+}
+
+public class UserIdPassword {
+    public static void main(String[] args) {
+        user usr=new user();
+        usr.read();
+        usr.print();
+        usr.reread();
+        usr.reprint();
+        
+    }
+}
