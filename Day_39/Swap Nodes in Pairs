@@ -1,0 +1,35 @@
+//Code
+
+class Solution {
+    public ListNode swapPairs(ListNode head) {
+        if(head==null||head.next==null){
+            return head;
+        }
+        ListNode prv=head;
+        ListNode curr=head.next;
+        ListNode next=head.next.next;
+        head=curr;
+        head.next=prv;
+        head.next.next=swapPairs(next);
+        return head;
+    }
+}
+
+/////Test Case
+
+
+Input
+head =
+[1,2,3,4]
+Output
+[2,1,4,3]
+Expected
+[2,1,4,3]
+
+Input
+head =
+[]
+Output
+[]
+Expected
+[]
